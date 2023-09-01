@@ -9,7 +9,11 @@ export function getStaticPaths() {
 
 export async function GET(request) {
     const product = products.find((item) => item.id === parseInt(request.params.id))
-    return new Response(JSON.stringify(product))
+    return new Response(JSON.stringify(product), {
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
 
 }
  
