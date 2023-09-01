@@ -1,4 +1,4 @@
-import {reviews} from './reviewData'
+import {reviews} from '../../../data/reviewData'
 
 export async function GET(request) {
 

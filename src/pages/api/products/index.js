@@ -1,4 +1,4 @@
-import {products} from './productData.js'
+import {products} from '../../../data/productData.js'
 // make GET route for nextjs
 
 export async function GET(request) {

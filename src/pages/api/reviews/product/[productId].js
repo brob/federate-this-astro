@@ -1,5 +1,7 @@
-import {products} from '../../products/productData.js'
-import {reviews} from '../reviewData'
+import {products} from '../../../../data/productData.js'
+
+import {reviews} from '../../../../data/reviewData'
+
 
 export function getStaticPaths() {
 	return products.map((item) => {

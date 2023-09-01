@@ -1,4 +1,4 @@
-import {products} from './productData.js'
+import {products} from '../../../data/productData.js'
 
 
 export function getStaticPaths() {
