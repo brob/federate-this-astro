@@ -39,7 +39,7 @@ type Products {
 ### Get product by id
 
 ```http
-GET /api/products/:id
+GET /api/product/:id
 ```
-[Example](/api/products/1)
+[Example](/api/product/1)
 
