@@ -8,7 +8,7 @@ export async function GET({params}) {
     const body = await data.json()
 
     // return products based on nextjs return
-    return new Response(JSON.stringify(body), {
+    return new Response(JSON.stringify({data: body}), {
         headers: {
             'content-type': 'application/json'
         }

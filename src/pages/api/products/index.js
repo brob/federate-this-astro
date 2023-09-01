@@ -3,7 +3,7 @@ import {products} from '../../../data/productData.js'
 
 export async function GET(request) {
 
-    return new Response(JSON.stringify(products), {
+    return new Response(JSON.stringify({data: products}), {
         headers: {
             'content-type': 'application/json'
         }

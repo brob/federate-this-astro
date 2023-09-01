@@ -11,7 +11,7 @@ export function getStaticPaths() {
 
 export async function GET(request) {
     const review = reviews.find((item) => item.product === parseInt(request.params.productId))
-    return new Response(JSON.stringify(review), {
+    return new Response(JSON.stringify({data: review}), {
         headers: {
             'content-type': 'application/json'
         }
