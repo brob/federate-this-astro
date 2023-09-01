@@ -9,10 +9,10 @@ layout: ../../layouts/page.astro
 ### Get all reviews
 A collection of fake review information to import into Hygraph remote sources.
 
-[Example](/api/reviews)
+[Example](/api/reviews/all)
 
 ```http
-GET /api/reviews
+GET /api/reviews/all
 ```
 
 #### Potential SDL
