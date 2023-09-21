@@ -5,21 +5,12 @@ import {reviews} from '../../../../data/reviewData'
 export const prerender = false;
 
 
-
-export function getStaticPaths() {
-	return products.map((item) => {
-		return { params: { productId: item.id } };
-	});
-}
-
-
 function isId(value) {
     const id = parseInt(value)
     if (isNaN(id)) {
         return false
     }
     return true
-
 }
 
 export async function GET(request) {
