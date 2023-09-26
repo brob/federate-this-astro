@@ -22,6 +22,7 @@ GET /api/reviews/all
 type Review {
     id: Int
     product: Int
+    productSlug: String
     name: String
     rating: Float
     comment: String
