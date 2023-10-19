@@ -1,3 +1,5 @@
+// clothing and home goods
+
 export const products = [ 
     {
         id: 1,
