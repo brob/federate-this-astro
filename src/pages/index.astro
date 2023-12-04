@@ -11,7 +11,7 @@ const routes = await Astro.glob('./routes/*.md')
 			<h2 class="text-4xl font-bold">Your collection of fake APIs to use content federation in demos</h2>
 		  
 			<h3 class="text-xl font-bold">Routes</h3>
-			<ul class=" text-lg">
+			<ul class="text-lg">
 				{routes.map(({frontmatter, url}) => (<li><a href={url}>{frontmatter.title</a></li>))}
 			</ul>
 
