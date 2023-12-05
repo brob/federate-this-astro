@@ -13,7 +13,7 @@ export default defineConfig({
   
   integrations: [tailwind(),
     starlight({
-			title: 'Hygraph Documentation',
+			title: 'Federate This',
 			
 			
 			
