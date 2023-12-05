@@ -20,8 +20,8 @@ const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
                 color: #333;
             }
             .layout {
-                max-width: 85ch;
                 margin: auto;
+                max-width: 105ch;
             }
             pre {
                 padding: 1rem;
@@ -30,15 +30,12 @@ const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
     </head>
     <body>
         <Header />
-        <main class="layout prose">
+        <main class="wpy-10 layout prose max-w-5xl container">
 			
 			<div id="grid-main">
-				<!-- <PageContent {frontmatter} {headings} {githubEditUrl}> -->
 					<slot />
-				<!-- </PageContent> -->
 			</div>
 			<aside id="grid-right" class="grid-sidebar" title="Table of Contents">
-				<!-- <RightSidebar {headings} {githubEditUrl} /> -->
 			</aside>
 		</main>
         <Footer />

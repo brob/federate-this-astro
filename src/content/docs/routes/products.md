@@ -1,6 +1,5 @@
 ---
 title: Products routes
-layout: ../../layouts/page.astro
 ---
 
 

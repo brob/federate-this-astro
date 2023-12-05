@@ -1,6 +1,5 @@
 ---
 title: YouTube Routes
-layout: ../../layouts/page.astro
 ---
 
 ## YouTube Routes

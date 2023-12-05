@@ -1,11 +1,37 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-import netlify from "@astrojs/netlify/functions";
-
-import vercel from "@astrojs/vercel/serverless";
+import vercel from '@astrojs/vercel/serverless';
+import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
   output: 'hybrid',
-  adapter: vercel()
+  adapter: vercel({
+	functionPerRoute: false,
+
+  }),
+  
+  integrations: [tailwind(),
+    starlight({
+			title: 'Hygraph Documentation',
+			
+			
+			
+			tableOfContents: {
+				maxHeadingLevel: 4,
+			},
+			social: {
+				github: 'https://github.com/hygraph',
+				twitter: 'https://twitter.com/hygraph',
+			},
+			sidebar: [
+				
+				{
+					label: 'Routes',
+					autogenerate: { directory: 'routes', collapsed: true },
+				},
+			
+	
+			],
+		})]
 });

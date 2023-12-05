@@ -1,6 +1,6 @@
 ---
 title: Dev.to routes
-layout: ../../layouts/page.astro
+description: "Routes that access article lists from Dev.to"
 ---
 
 ## Dev.to Route

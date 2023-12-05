@@ -1,6 +1,5 @@
 ---
 title: Reviews Routes
-layout: ../../layouts/page.astro
 ---
 
 
