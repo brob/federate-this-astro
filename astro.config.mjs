@@ -1,17 +1,13 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel/serverless";
-
+import vercel from '@astrojs/vercel/serverless';
 import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
   output: 'hybrid',
-  adapter: vercel(
-	{
-		functionPerRoute: false,
-	  }
-  ),
+  adapter: vercel(),
+  
   integrations: [tailwind(),
     starlight({
 			title: 'Hygraph Documentation',
