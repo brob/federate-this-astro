@@ -213,6 +213,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"routes/skncre.md": {
+	id: "routes/skncre.md";
+  slug: "routes/skncre";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "routes/youtube.md": {
 	id: "routes/youtube.md";
   slug: "routes/youtube";
@@ -230,5 +237,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = typeof import("../src/content/config.mjs");
+	type ContentConfig = typeof import("../src/content/config");
 }

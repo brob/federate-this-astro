@@ -3,26 +3,29 @@ title: Federate This
 description: A collection of APIs and information for federated data sources in GraphQL
 template: splash
 hero:
-  tagline: This is just a test, so don't worry about the image to the right
+  tagline:  A collection of APIs and information for federated data sources in GraphQL
   
-  actions:
-    - text: Get started now 
-      link: /getting-started/
-      icon: right-arrow
-      variant: primary
-    - text: API Reference
-      link: /api-reference/
-      icon: right-arrow
+  # actions:
+  #   - text: Get started now 
+  #     link: /getting-started/
+  #     icon: right-arrow
+  #     variant: primary
+    
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { CardGrid, Card, LinkCard } from '@astrojs/starlight/components';
 
-## Looking for something specific?
+## Route information
 
 <CardGrid >
 	<LinkCard href="/routes/products/" title="Generic Product API Routes" description="Information to help you federate Products into your GraphQL solution" icon="pencil">
 		
 	</LinkCard>
+  <Card title="Products">
+    <ul>
+      <li><a href="/routes/products/">Products</a></li>
+    </ul>
+  </Card>
 	<LinkCard href="/api-reference/" title="API Reference" description="Get detailed information on the Content API, Management SDK, and Schema creation" icon="add-document" />
 		
 </CardGrid>
