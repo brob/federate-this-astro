@@ -3,7 +3,6 @@ title: Reviews Routes
 ---
 
 
-## Reviews Routes
 
 ### Get all reviews
 A collection of fake review information to import into Hygraph remote sources.

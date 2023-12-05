@@ -2,7 +2,6 @@
 title: YouTube Routes
 ---
 
-## YouTube Routes
 
 ```http
 GET /api/youtube/playlist/:playlistId

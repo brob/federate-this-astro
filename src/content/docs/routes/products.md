@@ -3,7 +3,6 @@ title: Products routes
 ---
 
 
-## Products Routes
 
 ### Get all products
 A collection of fake product information to import into Hygraph remote sources.

@@ -3,7 +3,6 @@ title: Dev.to routes
 description: "Routes that access article lists from Dev.to"
 ---
 
-## Dev.to Route
 
 ```http
 GET /api/devto/articles/:username
