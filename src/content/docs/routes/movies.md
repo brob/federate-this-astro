@@ -3,16 +3,16 @@ title: Movies Routes
 
 ---
 
+You can either query by the iMDB ID of a movie or by a movie title string. If you query by title string, you can add `?title=true` to the end of the query to get a movie that matches the title string. Title needs to be precise or else you'll get a movie you don't expect or a 404.
 
 
-
-```http
+```bash
 GET /api/omdb/movies/:imdbId
 ```
 
 [Example](/api/omdb/movies/tt2015381)
 
-```http
+```bash
 GET /api/omdb/movies/:titleString?title=true
 ```
 
