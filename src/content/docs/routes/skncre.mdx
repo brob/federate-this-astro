@@ -14,7 +14,8 @@ POST /api/graphql/skncre
 
 ### Get all products
 
-Get a list of all products in the API with the relevant details.
+Get a list of all products in the API with the relevant details. [See an example of this query in the playground](/api/graphql/skncre?query=query+MyQuery+%7B%0A++products+%7B%0A++++description%0A++++id%0A++++ingredients%0A++++name%0A++++price%0A++++shortDescription%0A++++slug%0A++++stock%0A++++images+%7B%0A++++++url%0A++++++alt%0A++++%7D%0A++%7D%0A%7D)
+
 
 <Tabs>
 <TabItem label="Query">
@@ -133,7 +134,7 @@ query MyQuery {
 
 ### Get a product by ID or slug
 
-Get a single product by ID or slug.
+Get a single product by ID or slug. [See an example of this query in the playground](/api/graphql/skncre?query=query+MyQuery+%7B%0A++product%28id%3A+"2"%29+%7B%0A++++description%0A++++id%0A++++ingredients%0A++++name%0A++++price%0A++++shortDescription%0A++++slug%0A++++stock%0A++%7D%0A%7D)
 
 <Tabs>
 <TabItem label="Query">
