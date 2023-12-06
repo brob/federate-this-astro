@@ -2,7 +2,7 @@
 title: Products routes
 ---
 
-
+import { Card } from '@astrojs/starlight/components'
 
 ### Get all products
 A collection of fake product information to import into Hygraph remote sources.
@@ -41,10 +41,14 @@ GET /api/product/:id
 ```
 [Example](/api/product/1)
 
-### See this in action
+
+<Card title="See this in action" icon="rocket">
+
 
 Want to see how to implement this? The Hygraph Getting Started guide will walk you through the process of setting up a Hygraph project and implementing this example.
 
 * [Hygraph Getting Started](https://hygraph.com/docs/getting-started/onboarding-overview)
 * [Hygraph Getting Started Project](https://app.hygraph.com/clone/4d65d295cd1e4912aa401fb15f72d40d?name=GS2023%20Stage%202)
 * [Implementing the Products remote source](https://hygraph.com/docs/getting-started/add-remote-source)
+* [Hygrpah Implementation Guide](/guides/implement-products-route-in-hygraph-remote-source/)
+</Card>
