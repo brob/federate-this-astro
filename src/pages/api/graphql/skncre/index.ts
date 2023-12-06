@@ -24,11 +24,15 @@ const schema = createSchema({
     }
 
     type Query {
+      product(id: ID): Product
       products: [Product!]
     }    
   `,
   resolvers: {
     Query: {
+      product: (_, { id }) => {
+        return products.find(product => product.id === Number(id));
+      },
       products: () => products,
     },
   },
