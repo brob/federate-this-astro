@@ -185,6 +185,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
+"guides/implement-products-route-in-hygraph-remote-source.mdx": {
+	id: "guides/implement-products-route-in-hygraph-remote-source.mdx";
+  slug: "guides/implement-products-route-in-hygraph-remote-source";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "index.mdx": {
 	id: "index.mdx";
   slug: "index";
@@ -199,13 +206,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"routes/products.md": {
-	id: "routes/products.md";
+"routes/products.mdx": {
+	id: "routes/products.mdx";
   slug: "routes/products";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 "routes/reviews.md": {
 	id: "routes/reviews.md";
   slug: "routes/reviews";
