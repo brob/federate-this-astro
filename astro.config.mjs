@@ -30,6 +30,11 @@ export default defineConfig({
 					label: 'Routes',
 					autogenerate: { directory: 'routes', collapsed: true },
 				},
+				{
+					label: 'Guides',
+					collapsed: true,
+					autogenerate: { directory: 'guides' },
+				}
 			
 	
 			],

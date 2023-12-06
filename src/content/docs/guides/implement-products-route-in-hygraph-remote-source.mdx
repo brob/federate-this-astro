@@ -1,0 +1,213 @@
+---
+title: Implementing the Products Route in a Hygraph Remote Source field
+sidebar: 
+    label: "Implementing the Products Route"
+prev: 
+    link: /routes/products/
+    label: Products Route
+next: false
+---
+
+import { Tabs, TabItem, Card } from "@astrojs/starlight/components"
+
+
+To start, we'll need to create a new Hygraph project. You can add a blank project or start from the [Hygraph Getting Started Project](https://app.hygraph.com/clone/4d65d295cd1e4912aa401fb15f72d40d?name=GS2023%20Stage%201).
+
+## Adding a REST Remote Source
+
+The first step in creating a remote source in Hygraph is to add it to the project's Schema. Navigate to the Schema section of your project and click the plus by the Remote Sources section.
+
+Since we want to use remote content in our project, the first step is to create a Remote Source in our project Schema. We'll connect a `REST API` using our `DEMO Hygraph API`.
+
+
+![Configuring our remote source](https://hygraph.com/images/docs/getting-started/add_remote_source_to_schema.gif)
+
+Enter the following data into the form presented:
+
+table:
+
+| Field | Value |
+| --- | --- |
+| Display name | Product Source |
+| Type | REST |
+| Base URL | https://federatethis.com/api |
+| Custom type definitions | Our SDLs (see below) |
+
+### Product SDLs
+
+These SDLs are available in the [Product Route documentation](/routes/products/). We'll use these SDLs to configure the GraphQL types for the Products.
+
+<Tabs>
+  <TabItem label="Product">
+    This SDL gives the field-level information for a singular product.
+```graphql
+type Product {
+  id: Int
+  name: String
+  price: Int
+  description: String
+  image: String
+  category: String
+  rating: Float
+  numReviews: Int
+  countInStock: Int
+}
+```
+  </TabItem>
+  <TabItem label="Products">
+  This SDL creates a type for a list of products.
+```graphql
+type Products {
+  data: [Product]
+}
+```
+  </TabItem>
+  <TabItem label="ProductMeta">
+    This SDL creates a type for a singular product that gets returned by the API.
+```graphql
+type ProductMeta {
+  data: Product
+}
+```
+  </TabItem>
+</Tabs>
+
+### Review SDLs
+These SDLs are available in the [Review Route documentation](/routes/reviews/). We'll use these SDLs to configure the GraphQL types for the Reviews.
+
+<Tabs>
+  <TabItem label="Review">
+  This SDL gives the field-level information for a singular review.
+```graphql
+type Review {
+    id: Int
+    product: Int
+    productSlug: String
+    name: String
+    rating: Float
+    comment: String
+}
+```
+  </TabItem>
+    <TabItem label="Reviews">
+    This SDL creates a type for a list of reviews.
+```graphql
+type Reviews {
+  data: [Review]
+}
+```
+  </TabItem>
+    <TabItem label="ReviewMeta">
+    This SDL creates a type for a singular review that gets returned by the API.
+```graphql
+type ReviewMeta {
+  data: Review
+}
+```
+  </TabItem>
+</Tabs>
+
+Your finished remote source should look like this:
+
+![Finished remote source](https://hygraph.com/images/docs/getting-started/show_finished_remote_source.gif)
+
+## Add a top-level remote source query
+
+Now that we have our remote source configured, we can add a top-level query to our schema. This will allow us to query our remote source from our project.
+
+From the Schema section, click the Queries system model from the models list. This is where we can add queries directly to the top of our Hygraph API.
+
+On a new project, the queries model will be empty. Since we added a REST Remote Source, we'll add a REST Remote Source Field from the list on the right.
+
+Add the following data to the form presented:
+| Tab         | Field               | Input                                                                                                                                               |
+| ----------- | ------------------  | ----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Settings    | Display name        | Products                                                                                                                                             |
+| Settings    | API ID              | Completing the display name will autocomplete the `API ID` field. We'll leave this value as it is.                                                  |
+| Settings    | Remote source       | `Product Source` is selected by default. We'll leave this value as it is.                                                                                |
+| Settings    | Method              | `GET` is selected by default. We'll leave this value as it is.                                                                                      |
+| Settings    | Return type         | Use the dropdown to select `Products`, which is one of the `custom type definitions` we configured for our remote source.                 |                                  
+| Settings    | Path                | Write `/products` here. <br></br>This path will be added to our remote source base path to get a resulting endpoint.   |
+
+
+## Query the Remote Source
+
+Now that we have our remote source configured and a query to access it, we can query our remote source from our project. For now, head to the API Playground in your project. 
+
+You can use the API explorer to build your `projects` query or use the query below and you should have the response listed.
+
+<Tabs>
+  <TabItem label="Query">
+```graphql
+query MyQuery {
+  products {
+    data {
+      category
+      name
+      price
+      countInStock
+      description
+      id
+      image
+      numReviews
+      rating
+    }
+  }
+}
+```
+  </TabItem>
+  <TabItem label="Response">
+```json
+{
+  "data": {
+    "products": {
+      "data": [
+        {
+          "category": "Category 1",
+          "name": "Product 1",
+          "price": 100,
+          "countInStock": 10,
+          "description": "This is product 1",
+          "id": 1,
+          "image": "https://picsum.photos/200/300",
+          "numReviews": 10,
+          "rating": 4.5
+        },
+        {
+          "category": "Category 2",
+          "name": "Product 2",
+          "price": 200,
+          "countInStock": 10,
+          "description": "This is product 2",
+          "id": 2,
+          "image": "https://picsum.photos/200/300",
+          "numReviews": 10,
+          "rating": 4.5
+        },
+        {
+          "category": "Category 3",
+          "name": "Product 3",
+          "price": 300,
+          "countInStock": 10,
+          "description": "This is product 3",
+          "id": 3,
+          "image": "https://picsum.photos/200/300",
+          "numReviews": 10,
+          "rating": 4.5
+        }
+      ]
+    }
+  }
+}
+```
+  </TabItem>
+</Tabs>
+
+
+<Card icon="information" title="More Resources">
+
+Want to learn more about the Products Route and how to implement in Hygraph? The Hygraph Getting Started documentation includes more use cases for this set of API Routes.
+
+* [Hygraph Getting Started Clonable Project](https://app.hygraph.com/clone/4d65d295cd1e4912aa401fb15f72d40d?name=GS2023%20Stage%201)
+* [Hygraph Getting Started docs](https://docs.hygraph.com/getting-started/)
+</Card>
