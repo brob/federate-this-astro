@@ -16,10 +16,12 @@ import { CardGrid, Card, LinkCard } from '@astrojs/starlight/components';
 
 ## Route information
 
+<CardGrid>
 	<LinkCard href="/routes/products/" title="Generic Product API Routes" description="Information to help you federate Products into your GraphQL solution" icon="pencil" />
 		  
 			<LinkCard href="/routes/reviews/" title="Generic Reviews API Routes" description="Information to help you federate Reviews into your GraphQL solution" icon="pencil" />
+			<LinkCard href="/routes/omdb/" title="Movie information from oMDB" description="A wrapper to the excellent oMDB Open Source movie database" icon="pencil" />
 	<LinkCard href="/routes/devto/" title="Dev.to Routes" description="Information to help you federate Dev.to Articles into your GraphQL solution" icon="pencil" />
-	<LinkCard href="/routes/skncre" title="SKNCRE Fake Product line GraphQL" description="Information to help you federate a GraphQL Product API into your GraphQL solution" icon="pencil" />
+	<LinkCard href="/routes/skncre" title="SKNCRE Fake Product line" description="Information to help you federate a GraphQL Product API into your GraphQL solution" icon="pencil" />
 	<LinkCard href="/routes/youtube/" title="YouTube API Routes" description="Information to help you federate YouTube videos into your GraphQL solution" icon="pencil" />
-
+</CardGrid>
