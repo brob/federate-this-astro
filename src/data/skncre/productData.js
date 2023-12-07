@@ -2,7 +2,7 @@ export const products = [
   {
     id: 1,
     slug: "face-serum",
-    name: "Your face serum",
+    name: "face serum",
     price: 199,
     ingredients:
       "snail slime, benzyl salicylate, hydroxyethylpiperazine ethane sulfonic acid, triethanolamine, snail slime, benzyl salicylate, hydroxyethylpiperazine ethane sulfonic acid, triethanolamine.",
@@ -25,7 +25,7 @@ export const products = [
   {
     id: 2,
     slug: "face-cream",
-    name: "Your face cream",
+    name: "face cream",
     price: 355,
     ingredients:
       "aqua, glycerin, butylene glycol, hydrogenated coco-glycerides, glyceryl stearate se, caprylic/capric triglyceride, dicaprylyl ether, phenyl trimethicone",
@@ -48,7 +48,7 @@ export const products = [
   {
     id: 3,
     slug: "eye-contour",
-    name: "Your eye contour",
+    name: "eye contour",
     price: 405,
     ingredients:
       "aqua, propylene glycole, isopropyl myristate, snail secretion filtrate, hyaluronic acid, acetyl hexapeptide-8, acetyl heptapeptide-4, polymnia sonchifolia root juice",
@@ -71,7 +71,7 @@ export const products = [
   {
     id: 4,
     slug: "bundle",
-    name: "Your skncre bundle",
+    name: "skncre bundle",
     price: 999,
     ingredients: "",
     description:
