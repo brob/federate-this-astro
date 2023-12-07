@@ -1,0 +1,182 @@
+---
+title: SKNCRE Product routes
+tableOfContents: false
+---
+import {Tabs, TabItem} from "@astrojs/starlight/components"
+
+The SKNCRE cosmetics brand content is served by GraphQL. Please [visit the playground](/api/graphql/skncre) to explore.
+
+```sh
+POST /api/graphql/skncre
+
+```
+
+<iframe style="width: 100%;aspect-ratio: 3 / 2.5;" src="/api/graphql/skncre?query=query+MyQuery+%7B%0A++products+%7B%0A++++description%0A++++id%0A++++ingredients%0A++++name%0A++++price%0A++++shortDescription%0A++++slug%0A++++stock%0A++++images+%7B%0A++++++url%0A++++++alt%0A++++%7D%0A++%7D%0A%7D" />
+
+
+## Query examples
+
+### Get all products
+
+Get a list of all products in the API with the relevant details. [See an example of this query in the playground](/api/graphql/skncre?query=query+MyQuery+%7B%0A++products+%7B%0A++++description%0A++++id%0A++++ingredients%0A++++name%0A++++price%0A++++shortDescription%0A++++slug%0A++++stock%0A++++images+%7B%0A++++++url%0A++++++alt%0A++++%7D%0A++%7D%0A%7D)
+
+
+
+
+<Tabs>
+<TabItem label="Query">
+
+```graphql
+query MyQuery {
+  products {
+    description
+    id
+    ingredients
+    name
+    price
+    shortDescription
+    slug
+    stock
+    images {
+      url
+      alt
+    }
+  }
+}
+```
+</TabItem>
+<TabItem label="Response">
+
+```json
+{
+  "data": {
+    "products": [
+      {
+        "description": "Indicated for the treatment of wrinkles in the periocular area and blemish of the bags; based on snail slime, hyaluronic acid, pre and probiotics. Snail slime: Nourishing, regenerating and antioxidant properties. It also has film-forming properties such as: proteins, mucopolysaccharides, allantoin and glycolic acid; that make the skin soft, healthy, hydrated, smooth, smooth, silky; preventing the formation of skin spots and the accumulation of impurities.",
+        "id": 1,
+        "ingredients": "snail slime, benzyl salicylate, hydroxyethylpiperazine ethane sulfonic acid, triethanolamine, snail slime, benzyl salicylate, hydroxyethylpiperazine ethane sulfonic acid, triethanolamine.",
+        "name": "Your face serum",
+        "price": 199,
+        "shortDescription": "This calming serum revitalizes the skin like never before.",
+        "slug": "face-serum",
+        "stock": 34,
+        "images": [
+          {
+            "url": "https://federate-this-astro.vercel.app/skncre/face_serum_1.jpg",
+            "alt": "Face serum Image 1"
+          },
+          {
+            "url": "https://federate-this-astro.vercel.app/skncre/face_serum_2.jpg",
+            "alt": "Face serum Image 2"
+          }
+        ]
+      },
+      {
+        "description": "Light and evanescent texture, with a fresh and pleasant touch. The basic formula of two main ingredients known for a long time for their functional properties: Pure Helicine and Hyaluronic Acid. Suitable for all skin types: dry, combination, and oily. Snail slime: Nourishing, regenerating, and antioxidant properties. It also has film-forming properties such as proteins, mucopolysaccharides, allantoin, and glycolic acid; that make the skin soft, healthy, hydrated, smooth, smooth, silky. Prevents the formation of skin spots (light and dark), pimples, stretch marks, and scars, and prevents the accumulation of blemishes.",
+        "id": 2,
+        "ingredients": "aqua, glycerin, butylene glycol, hydrogenated coco-glycerides, glyceryl stearate se, caprylic/capric triglyceride, dicaprylyl ether, phenyl trimethicone",
+        "name": "Your face cream",
+        "price": 355,
+        "shortDescription": "Discover the reactivating, cooling night cream to stimulate the skin overnight so you wake up with a rosy glow.",
+        "slug": "face-cream",
+        "stock": 6,
+        "images": [
+          {
+            "url": "https://federate-this-astro.vercel.app/skncre/face_cream_1.jpg",
+            "alt": "Face cream Image 1"
+          },
+          {
+            "url": "https://federate-this-astro.vercel.app/skncre/face_cream_2.png",
+            "alt": "Face cream Image 2"
+          }
+        ]
+      },
+      {
+        "description": "Containing face cream, serum and eye contour; ideal for an excellent beauty routine. Three items with one purchase. Also perfect as a gift box. Nourishing, regenerating and antioxidant properties. It also has film-forming properties such as proteins, mucopolysaccharides, allantoin and glycolic acid; that make the skin soft, healthy, hydrated, smooth, smooth, silky; prevents the formation of skin spots (light and dark), pimples, stretch marks, scars and preventing the accumulation of blemishes.",
+        "id": 3,
+        "ingredients": "aqua, propylene glycole, isopropyl myristate, snail secretion filtrate, hyaluronic acid, acetyl hexapeptide-8, acetyl heptapeptide-4, polymnia sonchifolia root juice",
+        "name": "Your eye contour",
+        "price": 405,
+        "shortDescription": "Say goodbye to bags, blemish and wrinkles in the periocular area.",
+        "slug": "eye-contour",
+        "stock": 3,
+        "images": [
+          {
+            "url": "https://federate-this-astro.vercel.app/skncre/eye_contour_1.jpg",
+            "alt": "Eye contour Image 1"
+          },
+          {
+            "url": "https://federate-this-astro.vercel.app/skncre/eye_contour_2.jpg",
+            "alt": "Eye contour Image 2"
+          }
+        ]
+      },
+      {
+        "description": "Indicated for the treatment of wrinkles in the periocular area and blemish of the bags; based on snail slime, hyaluronic acid, pre and probiotics. Snail slime: Nourishing, regenerating and antioxidant properties. It also has film-forming properties such as: proteins, mucopolysaccharides, allantoin and glycolic acid; that make the skin soft, healthy, hydrated, smooth, smooth, silky; preventing the formation of skin spots and the accumulation of impurities.",
+        "id": 4,
+        "ingredients": "",
+        "name": "Your skncre bundle",
+        "price": 999,
+        "shortDescription": "A travel-size cream, contour, and serum, presented in a signature silk-white pouch.",
+        "slug": "bundle",
+        "stock": 4,
+        "images": [
+          {
+            "url": "https://federate-this-astro.vercel.app/skncre/bundle_1.png",
+            "alt": "Bundle Image 1"
+          },
+          {
+            "url": "https://federate-this-astro.vercel.app/skncre/bundle_2.png",
+            "alt": "Bundle Image 2"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+</TabItem>
+</Tabs>
+
+### Get a product by ID or slug
+
+Get a single product by ID or slug. [See an example of this query in the playground](/api/graphql/skncre?query=query+MyQuery+%7B%0A++product%28id%3A+"2"%29+%7B%0A++++description%0A++++id%0A++++ingredients%0A++++name%0A++++price%0A++++shortDescription%0A++++slug%0A++++stock%0A++%7D%0A%7D)
+
+<Tabs>
+<TabItem label="Query">
+
+```graphql
+query MyQuery {
+  product(id: "2") {
+    description
+    id
+    ingredients
+    name
+    price
+    shortDescription
+    slug
+    stock
+  }
+}
+```
+</TabItem>
+<TabItem label="Response">
+
+```json
+{
+  "data": {
+    "product": {
+      "description": "Light and evanescent texture, with a fresh and pleasant touch. The basic formula of two main ingredients known for a long time for their functional properties: Pure Helicine and Hyaluronic Acid. Suitable for all skin types: dry, combination, and oily. Snail slime: Nourishing, regenerating, and antioxidant properties. It also has film-forming properties such as proteins, mucopolysaccharides, allantoin, and glycolic acid; that make the skin soft, healthy, hydrated, smooth, smooth, silky. Prevents the formation of skin spots (light and dark), pimples, stretch marks, and scars, and prevents the accumulation of blemishes.",
+      "id": 2,
+      "ingredients": "aqua, glycerin, butylene glycol, hydrogenated coco-glycerides, glyceryl stearate se, caprylic/capric triglyceride, dicaprylyl ether, phenyl trimethicone",
+      "name": "Your face cream",
+      "price": 355,
+      "shortDescription": "Discover the reactivating, cooling night cream to stimulate the skin overnight so you wake up with a rosy glow.",
+      "slug": "face-cream",
+      "stock": 6
+    }
+  }
+}
+```
+</TabItem>
+</Tabs>
