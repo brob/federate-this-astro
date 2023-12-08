@@ -15,7 +15,10 @@ export default defineConfig({
     starlight({
 			title: 'Federate This',
 			
-			
+			customCss: [
+				// Relative path to your custom CSS file
+				'./src/styles/custom.css',
+			  ],
 			
 			tableOfContents: {
 				maxHeadingLevel: 4,
