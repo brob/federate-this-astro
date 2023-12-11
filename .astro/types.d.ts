@@ -185,6 +185,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
+"guides/hygraph-remote-source.mdx": {
+	id: "guides/hygraph-remote-source.mdx";
+  slug: "guides/hygraph-remote-source";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 "guides/implement-products-route-in-hygraph-remote-source.mdx": {
 	id: "guides/implement-products-route-in-hygraph-remote-source.mdx";
   slug: "guides/implement-products-route-in-hygraph-remote-source";
@@ -206,6 +213,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"routes/movies.md": {
+	id: "routes/movies.md";
+  slug: "routes/movies";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
 "routes/products.mdx": {
 	id: "routes/products.mdx";
   slug: "routes/products";
@@ -220,13 +234,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
-"routes/skncre.md": {
-	id: "routes/skncre.md";
+"routes/skncre.mdx": {
+	id: "routes/skncre.mdx";
   slug: "routes/skncre";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
-} & { render(): Render[".md"] };
+} & { render(): Render[".mdx"] };
 "routes/youtube.md": {
 	id: "routes/youtube.md";
   slug: "routes/youtube";
@@ -234,6 +248,13 @@ declare module 'astro:content' {
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".md"] };
+"tools/json-to-sdl.mdx": {
+	id: "tools/json-to-sdl.mdx";
+  slug: "tools/json-to-sdl";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 };
 
 	};

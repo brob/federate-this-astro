@@ -16,6 +16,7 @@
     "@astrojs/starlight": "^0.14.0",
     "@astrojs/tailwind": "^5.0.2",
     "@astrojs/vercel": "^4.0.0",
+    "@walmartlabs/json-to-simple-graphql-schema": "^3.0.1",
     "graphql-yoga": "^5.0.0",
     "tailwindcss": "^3.3.5"
   }
