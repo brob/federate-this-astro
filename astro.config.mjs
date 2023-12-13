@@ -13,13 +13,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   output: 'hybrid',
-  vite: {
-    build: {
-      rollupOptions: {
-        external: ['@walmartlabs/json-to-simple-graphql-schema', '@components/JsonToSDL.jsx', '@components/Env.astro']
-      }
-    }
-  },
+  
   adapter: vercel({
     functionPerRoute: false
   }),
