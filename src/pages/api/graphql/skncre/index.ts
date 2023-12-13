@@ -2,14 +2,14 @@ export const prerender = false;
 
 import type { APIRoute } from 'astro';
 import { createYoga, createSchema } from 'graphql-yoga';
-import { products } from '../../../../data/skncre/productData'
+import { products, relatedProducts } from '../../../../data/skncre/productData'
 
 const schema = createSchema({
   typeDefs: `
     type Image {
       url: String!
       alt: String
-    }  
+    }
     
     type Product {
       id: Int!
@@ -23,8 +23,14 @@ const schema = createSchema({
       stock: Int
     }
 
+    type related {
+      id: Int!
+      products: [Product!]
+    }
+
     type Query {
-      product(id: ID): Product
+      product(id: ID): Product,
+      related(id: ID): related
       products: [Product!]
     }    
   `,
@@ -32,6 +38,9 @@ const schema = createSchema({
     Query: {
       product: (_, { id }) => {
         return products.find(product => product.id === Number(id));
+      },
+      related: (_, { id }) => {
+        return relatedProducts.find(related => related.id === Number(id));
       },
       products: () => products,
     },
