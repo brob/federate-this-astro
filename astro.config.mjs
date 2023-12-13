@@ -16,7 +16,7 @@ export default defineConfig({
   vite: {
     build: {
       rollupOptions: {
-        external: ['@components/JsonToSDL.jsx']
+        external: ['@components/JsonToSDL.jsx','@components/Env.astro']
       }
     }
   },
