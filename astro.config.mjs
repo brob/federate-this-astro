@@ -16,7 +16,7 @@ export default defineConfig({
   vite: {
     build: {
       rollupOptions: {
-        external: ['@walmartlabs/json-to-simple-graphql-schema']
+        external: ['@walmartlabs/json-to-simple-graphql-schema', '@components/JsonToSDL.jsx', '@components/Env.astro']
       }
     }
   },
