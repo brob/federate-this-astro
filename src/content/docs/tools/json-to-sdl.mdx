@@ -1,12 +1,20 @@
 ---
-title: JSON To SDL Tool
-
-
+title: 'JSON To SDL Tool'
+tableOfContents: false
 ---
 
-import jsonToSDL from '@components/jsonToSDL.astro'
+
+import JsonToSDL from '@components/JsonToSDL.jsx'
+
+import Env from '@components/Env.astro'
 
 
-<jsonToSDL />
+If you're using an endpoint not on Federate This, you may need to create an SDL (Schema Definition Language) file for your endpoint. This tool will help you do that. Put the response data in the JSON field, then click "Generate SDL" and get the SDL for use.
 
-booo
+
+
+<Env />
+
+<JsonToSDL client:load />
+
+
