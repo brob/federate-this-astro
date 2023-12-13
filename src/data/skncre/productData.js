@@ -244,4 +244,55 @@ export const relatedProducts = [
       },
     ],
   },
+  {
+    id: 4,
+    products: [
+      {
+        id: 1,
+        slug: "face-serum",
+        name: "face serum",
+        price: 199,
+        ingredients:
+          "snail slime, benzyl salicylate, hydroxyethylpiperazine ethane sulfonic acid, triethanolamine, snail slime, benzyl salicylate, hydroxyethylpiperazine ethane sulfonic acid, triethanolamine.",
+        description:
+          "Indicated for the treatment of wrinkles in the periocular area and blemish of the bags; based on snail slime, hyaluronic acid, pre and probiotics. Snail slime: Nourishing, regenerating and antioxidant properties. It also has film-forming properties such as: proteins, mucopolysaccharides, allantoin and glycolic acid; that make the skin soft, healthy, hydrated, smooth, smooth, silky; preventing the formation of skin spots and the accumulation of impurities.",
+        shortDescription:
+          "This calming serum revitalizes the skin like never before.",
+        stock: 34,
+        images: [
+          {
+            url: "https://federate-this-astro.vercel.app/skncre/face_serum_1.jpg",
+            alt: "Face serum Image 1",
+          },
+          {
+            url: "https://federate-this-astro.vercel.app/skncre/face_serum_2.jpg",
+            alt: "Face serum Image 2",
+          },
+        ],
+      },
+      {
+        id: 3,
+        slug: "eye-contour",
+        name: "eye contour",
+        price: 405,
+        ingredients:
+          "aqua, propylene glycole, isopropyl myristate, snail secretion filtrate, hyaluronic acid, acetyl hexapeptide-8, acetyl heptapeptide-4, polymnia sonchifolia root juice",
+        description:
+          "Containing face cream, serum and eye contour; ideal for an excellent beauty routine. Three items with one purchase. Also perfect as a gift box. Nourishing, regenerating and antioxidant properties. It also has film-forming properties such as proteins, mucopolysaccharides, allantoin and glycolic acid; that make the skin soft, healthy, hydrated, smooth, smooth, silky; prevents the formation of skin spots (light and dark), pimples, stretch marks, scars and preventing the accumulation of blemishes.",
+        shortDescription:
+          "Say goodbye to bags, blemish and wrinkles in the periocular area.",
+        stock: 3,
+        images: [
+          {
+            url: "https://federate-this-astro.vercel.app/skncre/eye_contour_1.jpg",
+            alt: "Eye contour Image 1",
+          },
+          {
+            url: "https://federate-this-astro.vercel.app/skncre/eye_contour_2.jpg",
+            alt: "Eye contour Image 2",
+          },
+        ],
+      },
+    ],
+  },
 ];
