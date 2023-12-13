@@ -14,9 +14,9 @@ import react from "@astrojs/react";
 export default defineConfig({
   output: 'hybrid',
   vite: {
-    ssr: {
+    build: {
       rollupOptions: {
-        external: ['@components/JsonToSDL.jsx','@components/Env.astro']
+        external: ['@walmartlabs/json-to-simple-graphql-schema']
       }
     }
   },
