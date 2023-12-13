@@ -13,6 +13,13 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   output: 'hybrid',
+  vite: {
+    build: {
+      rollupOptions: {
+        external: '@components/JsonToSDL.jsx'
+      }
+    }
+  },
   adapter: vercel({
     functionPerRoute: false
   }),
