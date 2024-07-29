@@ -5,3 +5,6 @@ node_modules
 .netlify
 dist
 .env
+
+.DS_Store
+public/.DS_Store
